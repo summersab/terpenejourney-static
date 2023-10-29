@@ -4,11 +4,15 @@ on:
   push:
     branches:
     - master
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+    - name: Create env file
+      run: |
+          cat > env.yml << EOF
+          ${{ secrets.ENV }}
+          EOF
     - uses: actions/checkout@master
     - uses: jakejarvis/s3-sync-action@master
       with:
