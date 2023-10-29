@@ -1,0 +1,280 @@
+.noscroll {
+	overflow-y: hidden;
+}
+.headlessshoppingcart-pay-cart {
+	overflow-x: visible !important;
+	position: fixed;
+	background: #e4e4e4 !important;
+}
+.showheadlessshoppingcart-pay-cart {
+	/*right:-30vw*/
+}
+.cart-hide {
+	position: absolute;
+	opacity: 50%;
+	background: black;
+	height: 100%;
+	width: 100%;
+	margin: -1.5rem;
+	z-index: 99;
+}
+.cart-hide.hidden {
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}
+@keyframes hide-scroll {
+	from, to { overflow: hidden; }
+}
+h2.headlessshoppingcartjs,
+h3.headlessshoppingcartjs,
+h4.headlessshoppingcartjs,
+p.headlessshoppingcartjs {
+	color: #000
+}
+.headlessshoppingcartjs h4 {
+	font-size: 14px !important;
+}
+.headlessshoppingcartjs h5 {
+		color: #4b5058;
+}
+.headlessshoppingcart-pay-cart {
+	width: 280px !important;
+}
+.headlessshoppingcart-pay-cart-content {
+	position: relative;
+}
+.cart-total-tax {
+	text-align: right;
+}
+@media (min-width: 768px) {
+	.headlessshoppingcart-pay-cart {
+		width: 310px !important;
+	}
+}
+@media (min-width: 992px) {
+	.headlessshoppingcart-pay-cart {
+		width: 340px !important;
+	}
+}
+.checkout-button {
+	border-radius: 4.9rem;
+    background: #00b6ed !important;
+    border-color: #00b6ed !important;
+}
+.checkout-button:hover {
+	background: #fff !important;
+	color:#00b6ed !important;
+}
+.checkout-button svg {
+	transition: all 0.3s linear;
+	fill: #fff;
+}
+.checkout-button:hover svg {
+	fill: #00b6ed;
+}
+.item-image {
+	border-radius: 6px;
+}
+.transaction__total .subtotal__label,
+.transaction__total .subtotal__value {
+    font-size: 16px;
+    font-weight: bold;
+    color: #676767;
+}
+.subtotal__label {
+    text-align: left;
+    color: #4d4d4d;
+    font-size: 12px;
+    padding-left: 5px;
+}
+.transaction__subtotal .subtotal__label,
+.transaction__total .subtotal__label {
+    padding-left: 0;
+}
+.subtotal--row {
+    margin-bottom: 0;
+    padding: 0;
+}
+.transaction__total .subtotal__label,
+.transaction__total .subtotal__value {
+    font-size: 16px;
+    font-weight: bold;
+    color: #676767;
+}
+.subtotal__value {
+    text-align: right;
+    color: #4d4d4d;
+    vertical-align: bottom;
+}
+.transaction {
+    color: #4d4d4d;
+    font-size: 13px;
+}
+.transaction__header {
+    text-align: center;
+}
+.transaction__header {
+    margin-bottom: 0;
+}
+.transaction__section {
+    padding: 5px 0;
+    margin-bottom: .4em;
+	text-align: left;
+}
+.transaction__total {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+.transaction__ui__header {
+    display: inline-block;
+    vertical-align: top;
+}
+ul.transaction {
+	list-style: none;
+	padding: 0;
+}
+.transaction table {
+	width: 100%;
+}
+
+/*.headlessshoppingcartjs h1,
+.headlessshoppingcartjs h2,
+.headlessshoppingcartjs h3,
+.headlessshoppingcartjs h4,
+.headlessshoppingcartjs h5,
+.headlessshoppingcartjs h6,
+.headlessshoppingcartjs span,
+.headlessshoppingcartjs a,
+.headlessshoppingcartjs p*/
+.headlessshoppingcartjs * {
+	font-family: protipo, sans-serif !important;	
+}
+
+
+
+/* Styling the bar itself */
+#notification-bar {
+	position: fixed;
+	top: -60px;
+	display: block;
+	z-index: 99999;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 10px;
+	background-color: #E03C39;
+	color: #fff;
+	font-size: 25px;
+	text-align: center;
+	-webkit-box-shadow: 0 -8px 6px -6px black;
+	   -moz-box-shadow: 0 -8px 6px -6px black;
+			box-shadow: 0 -8px 6px -6px black;
+	transition: top 1s;
+}
+/* Hiding the checkbox */
+#toggle-notification {
+	display: none;
+}
+/* Styling the lables, to show and hide the bar */
+#show-notification {
+/*	position: fixed;
+	z-index: 9999;
+	top: 0;
+	right: 30px;
+	display: block;
+	padding: 10px;
+	background-color: #000000;
+	color: #fff;
+*/	display: none;
+}
+#hide-notification {
+	float: right;
+	display: inline-block;
+	margin-bottom: 0px;
+}
+/* Displaying the bar when the checkbox is checked *
+#toggle-notification:checked + #notification-bar {
+	transition: top 1s;
+	top: 0px;
+}*/
+#notification-bar.show {
+	transition: top 1s;
+	top: 0px;
+}
+#notification-message {
+	display: inline-block;
+	font-weight: 700;
+}
+
+.hidden {
+	display: none !important;
+	visibility: hidden !important;
+	opacity: 0 !important;
+}
+.loader {
+	top: 50%;
+	left: 50%;
+	margin: auto;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	z-index: 99;
+	vertical-align: middle;
+}
+.loader > div {
+	background-color: white;
+	width: 10px;
+	height: 10px;
+	border-radius: 100%;
+	display: inline-block;
+	animation: bouncedelay 1.4s infinite ease-in-out;
+	-webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+	-o-animation: bouncedelay 1.4s infinite ease-in-out;
+	animation-fill-mode: both;
+	-webkit-animation-fill-mode: both;
+}
+.loader .bounce1 {
+	-webkit-animation-delay: -0.32s;
+	animation-delay: -0.32s;
+}
+.loader .bounce2 {
+	-webkit-animation-delay: -0.16s;
+	animation-delay: -0.16s;
+}
+@-webkit-keyframes bouncedelay {
+	0%, 80%, 100% {
+		-webkit-transform: scale(0);
+	}
+	40% {
+		-webkit-transform: scale(1);
+	}
+}
+@-moz-keyframes bouncedelay {
+	0%, 80%, 100% {
+		-moz-transform: scale(0);
+	}
+	40% {
+		-moz-transform: scale(1);
+	}
+}
+@-o-keyframes bouncedelay {
+	0%, 80%, 100% {
+		-o-transform: scale(0);
+	}
+	40% {
+		-o-transform: scale(1);
+	}
+}
+@keyframes bouncedelay {
+	0%, 80%, 100% {
+		transform: scale(0);
+	}
+	40% {
+		transform: scale(1);
+	}
+}
+[data-jinja] {
+	display: none;
+	visibility: hidden;
+	opacity: 0;
+}
