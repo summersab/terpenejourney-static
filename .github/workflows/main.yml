@@ -1,4 +1,4 @@
-name: Upload Website
+name: Upload Website w/ CloudFront
 
 on:
   workflow_dispatch:
@@ -10,11 +10,14 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - uses: jakejarvis/s3-sync-action@master
+    - uses: actions/checkout@v2
+    - uses: kersvers/s3-sync-with-cloudfront-invalidation@v1.0.0
       with:
         args: --acl public-read --follow-symlinks --delete
       env:
-        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+        DISTRIBUTION_ID: 'E2LJU33FGL2VH'
+        AWS_REGION: 'us-east-1'   # optional: defaults to us-east-1
+        SOURCE_DIR: 'public'      # optional: defaults to entire repository
