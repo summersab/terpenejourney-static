@@ -1,4 +1,5 @@
-var apiUrl = 'https://dev.platypusinnovations.com/api';
+//var apiUrl = 'https://dev.platypusinnovations.com/api';
+var apiUrl = 'https://api.terpenejourney.com';
 
 if (getTLD() == 'terpenejourney.com') {
 	var apiUrl = 'https://api.terpenejourney.com';
